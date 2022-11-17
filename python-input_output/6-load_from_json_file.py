@@ -5,7 +5,7 @@
 import json
 
 
-def save_to_json_file(my_obj, filename):
+def load_from_json_file(filename):
     """How far now"""
-    with open(filename, "w+") as f:
-        return json.dump(my_obj, f)
+    with open(filename, "r") as f:
+        return json.load(f)
