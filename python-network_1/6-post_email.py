@@ -2,8 +2,8 @@
 """a Python script that takes in a URL """
 
 
-#!/usr/bin/python3
-"""a Python script that takes in a URL """
+import requests
+import sys
 
 
 if __name__ == "__main__":
