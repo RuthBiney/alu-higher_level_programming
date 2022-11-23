@@ -1,2 +1,2 @@
 --list all databases in mysql server
-SHOW DATABASES;
+mysql -u user -p
