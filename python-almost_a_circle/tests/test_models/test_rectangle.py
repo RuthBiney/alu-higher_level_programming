@@ -390,7 +390,7 @@ class TestRectangle(unittest.TestCase):
     def test_load_from_file(self):
         """test normal use"""
         r1 = Rectangle(1, 2, 3, 4, 5)
-        r1 = Rectangle(1, 2, 3, 4, 5)
+        r2 = Rectangle(1, 2, 3, 4, 5)
         li = [r1, r2]
         Rectangle.save_to_file(li)
         lo = Rectangle.load_from_file()
