@@ -71,7 +71,7 @@ class TestRectangle(unittest.TestCase):
         r3 = Rectangle(4, 2, 3, 2)
         with patch('sys.stdout', n=StringIO()) as fall:
             r1.display()
-            self.assertEqual(fall.getvalue(), (" " * 4 + "#" * 2 + "\n") * 3)
+            self.assertEqual(fall.getvalue(), '    ##\n    ##\n    ##\n'  )
                 
         with patch('sys.stdout', n=StringIO()) as f:
              r2.display()
