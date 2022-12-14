@@ -5,41 +5,41 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """defining the square"""
+    """square presentaiion"""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """initialization"""
+        """square initialisation"""
         super().__init__(size, size, x, y, id)
-        self.size = size
+        self.size = 
 
     @property
     def size(self):
-        """getter for size"""
+        """getting the size"""
         return self.width
-    
+
     @size.setter
     def size(self, value):
-        """setter for size"""
+        """setting the size"""
         self.width = value
         self.height = value
 
     def __str__(self):
-        """representing of the square"""
+        """showing the square"""
         return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id, self.x,
                                                          self.y, self.width)
-    
+
     def update(self, *args, **kwargs):
-        """update"""
-        if args:
-            for r, u in enumerate(args):
-                if r == 0:
-                    self.id = u
-                elif r == 1:
-                    self.size = u
-                elif r == 2:
-                    self.x = u
-                else:
-                    self.y = u
+        """updates"""
+        if len(args):
+            for i, a in enumerate(args):
+                if i == 0:
+                    self.id = a
+                elif i == 1:
+                    self.size = a
+                elif i == 2:
+                    self.x = a
+                elif i == 3:
+                    self.y = a
         else:
             if "id" in kwargs:
                 self.id = kwargs["id"]
@@ -49,19 +49,11 @@ class Square(Rectangle):
                 self.x = kwargs["x"]
             if "y" in kwargs:
                 self.y = kwargs["y"]
-
-     def to_dictionary(self):
-        """Return dictionary representation"""
+    def to_dictionary(self):
+        """presenting the square"""
         d = {}
         d["id"] = self.id
         d["size"] = self.size
         d["x"] = self.x
         d["y"] = self.y
         return d
-
-
-
-
-
-
-
