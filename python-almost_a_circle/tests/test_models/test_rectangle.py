@@ -57,7 +57,7 @@ class TestRectangle(unittest.TestCase):
             self.assertEqual(a.area(), 8)
 
     def test_str_(self):
-            """Test for area"""
+            """Test for __str__"""
             Base._Base__nb_objects = 0
             s = Rectangle(4, 2)
             with patch('sys.stdout', n=StringIO()) as fall:
@@ -73,11 +73,11 @@ class TestRectangle(unittest.TestCase):
             r1.display()
             self.assertEqual(fall.getvalue(), "####\n####\n")
                 
-        with patch('sys.stdout', new=StringIO()) as f:
+        with patch('sys.stdout', n=StringIO()) as f:
              r2.display()
              self.assertEqual(f.getvalue(), "   ####\n   ####\n")
                  
-        with patch('sys.stdout', new=StringIO()) as f:
+        with patch('sys.stdout', n=StringIO()) as f:
              r3.display()
              self.assertEqual(f.getvalue(), "\n\n   ####\n   ####\n")
 
