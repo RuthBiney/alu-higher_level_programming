@@ -89,7 +89,7 @@ class Base:
             with open(filename, 'r') as csvfile:
                 csv_reader = csv.reader(csvfile)
                 for args in csv_reader:
-                    if cls.__name__ is "Rectangle":
+                    if cls.__name__ == "Rectangle":
                         dictionary = {"id": int(args[0]),
                                       "width": int(args[1]),
                                       "height": int(args[2]),
@@ -232,68 +232,3 @@ class Base:
             turtle.right(90)
 
         turtle.getscreen()._root.mainloop()
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
