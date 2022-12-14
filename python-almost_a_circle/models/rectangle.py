@@ -90,7 +90,7 @@ class Rectangle(Base):
                                                                  self.__width,
                                                                  self.__height)
 
-     def update(self, *args, **kwargs):
+    def update(self, *args, **kwargs):
         """multiple attribute"""
         if len(args):
             for i, a in enumerate(args):
