@@ -46,7 +46,7 @@ class TestBase(unittest.TestCase):
         Square.save_to_file([])
         with open("Square.json", "r") as fall:
             self.assertEqual(fall.read(), "[]")
-            self.assertEqual(type(f.read()), str)
+            self.assertEqual(type(fall.read()), str)
 
         Square.save_to_file([Square(1)])
         with open("Square.json", "r") as fall:
@@ -62,7 +62,7 @@ class TestBase(unittest.TestCase):
         Rectangle.save_to_file([])
         with open("Rectangle.json", "r") as fall:
             self.assertEqual(fall.read(), "[]")
-            self.assertEqual(type(f.read()), str)
+            self.assertEqual(type(fall.read()), str)
 
         os.remove("Rectangle.json")
         Rectangle.save_to_file([Rectangle(1, 2)])

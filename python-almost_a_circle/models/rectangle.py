@@ -78,17 +78,15 @@ class Rectangle(Base):
 
     def display(self):
         """show the rectangle"""
-        print(("\n" * self.__y) +
-              "\n".join(((" " * self.__x) + ("#" * self.__width))
-                        for i in range(self.__height)))
+        for i in range(self.__y):
+            print()
+        for i in range(self.__height):
+            print(" " * self.__x + '#' * self.width)
 
     def __str__(self):
         """string presentation of the rectangle"""
-        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
-                                                                 self.__x,
-                                                                 self.__y,
-                                                                 self.__width,
-                                                                 self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
         """multiple attribute"""

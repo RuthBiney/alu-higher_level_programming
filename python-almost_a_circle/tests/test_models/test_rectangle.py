@@ -62,7 +62,7 @@ class TestRectangle(unittest.TestCase):
             s = Rectangle(4, 2)
             with patch('sys.stdout', n=StringIO()) as fall:
                 print(s)
-                self.assertEqual(fall.getvalue(), "[Rectangle] (1) 0/0 - 10/10")
+                self.assertEqual(fall.getvalue(), "[Rectangle] (1) 0/0 - 4/2")
         
     def test_display(self):
         """Test for display"""
@@ -71,17 +71,15 @@ class TestRectangle(unittest.TestCase):
         r3 = Rectangle(4, 2, 3, 2)
         with patch('sys.stdout', n=StringIO()) as fall:
             r1.display()
-            self.assertEqual(fall.getvalue(), '    ##\n    ##\n    ##\n'  )
+            self.assertEqual(fall.getvalue(), "####\n####\n")
                 
         with patch('sys.stdout', n=StringIO()) as f:
              r2.display()
-             self.assertEqual(f.getvalue(), "\n" * 8 +
-                             (" " * 7 + "#" * 5 + "\n") * 6)
+             self.assertEqual(f.getvalue(), "   ####\n   ####\n")
                  
         with patch('sys.stdout', n=StringIO()) as f:
              r3.display()
-             self.assertEqual(f.getvalue(), "\n" * 14 +
-                             (" " * 13 + "#" * 11 + "\n") * 12)
+             self.assertEqual(f.getvalue(), "\n\n   ####\n   ####\n")
 
     def test_dictionary(self):
         """Test for dictionary"""
