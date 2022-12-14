@@ -75,11 +75,11 @@ class Rectangle(Base):
     def area(self):
         """calculating the area of the rectangle"""
         return self.__width * self.__height
-    
+
     def display(self):
         """show the rectangle"""
         print(("\n" * self.__y) +
-                "\n".join(((" " * self.__x) + ("#" * self.__width))
+            "\n".join(((" " * self.__x) + ("#" * self.__width))
                           for i in range(self.__height)))
 
     def __str__(self):
@@ -116,7 +116,7 @@ class Rectangle(Base):
                 self.x = kwargs["x"]
             if "y" in kwargs:
                 self.y = kwargs["y"]
-    
+
     def to_dictionary(self):
         """presentation of the rectangle"""
         d = {}
@@ -126,16 +126,3 @@ class Rectangle(Base):
         d["x"] = self.x
         d["y"] = self.y
         return d
-
-
-
-
-
-
-
-
-
-
-
-
-
