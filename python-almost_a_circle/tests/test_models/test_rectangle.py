@@ -186,7 +186,7 @@ class TestRectangle(unittest.TestCase):
         Rectangle.save_to_file([])
         with open("Rectangle.json") as fall:
             self.assertEqual(fall.read(), "[]")
-            self.assertEqual(type(f.read()), str)
+            self.assertEqual(type(fall.read()), str)
 
         Rectangle.save_to_file([Rectangle(1, 2)])
         with open("Rectangle.json") as fall:
