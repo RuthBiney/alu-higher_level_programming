@@ -16,15 +16,15 @@ Rectangle = rectangle.Rectangle
 class TestRectangleDocs(unittest.TestCase):
     """test for rectangle class"""
     @classmethod
-    def setUpClass(cls):
+    def setUpClass(self):
         """seeting up the test"""
-        cls.rect_funcs = inspect.getmembers(Rectangle, inspect.isfunction)
+        self.rect_funcs = inspect.getmembers(Rectangle, inspect.isfunction)
 
     def test_pep8_conformance_rectangle(self):
         """confirmation of pep8"""
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/rectangle.py'])
-        self.assertEqual(result.total_errors,
+        self.assertEqual(result.total_errors, 0,
                          "Found code style errors (and warnings).")
 
     def test_pep8_conformance_test_rectangle(self):
