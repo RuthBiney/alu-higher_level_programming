@@ -191,7 +191,8 @@ class TestRectangle(unittest.TestCase):
             self.assertEqual(fall.read(),
                              '[{"id": 1, "width": 1, '
                              '"height": 2, "x": 0, "y": 0}]')
-
+                
+    os.remove(id)
     def test_save_file_empty(self):
         """Test for save_to_file with empty list"""
         Rectangle.save_to_file([])
