@@ -92,7 +92,8 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """multiple attribute"""
-        if len(args):
+
+        if args is not None and len(args) > 0:
             for i, a in enumerate(args):
                 if i == 0:
                     self.id = a
