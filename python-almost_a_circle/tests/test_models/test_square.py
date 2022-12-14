@@ -170,7 +170,7 @@ class TestSquare(unittest.TestCase):
         self.assertTrue(os.path.exists("Square.json"))
         with open("Square.json") as fall:
             self.assertEqual(fall.read(), "[]")
-            self.assertEqual(type(f.read()), str)
+            self.assertEqual(type(fall.read()), str)
 
     def test_save_from_file(self):
         """Test for save from file function"""
