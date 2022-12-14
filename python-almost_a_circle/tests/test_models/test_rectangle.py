@@ -65,7 +65,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.r2.id, 2)
         self.assertEqual(self.r3.id, 9)
         self.assertEqual(self.r4.id, 3)
-        
+
     def test_width(self):
         """test for width"""
         self.assertEqual(self.r1.width, 10)
@@ -138,7 +138,7 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(-1, 1)
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             r = Rectangle(0, 1)
-    
+
     def test_height_valueerror(self):
         """test for int"""
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
@@ -204,7 +204,6 @@ class TestRectangle(unittest.TestCase):
             output = buf.getvalue()
             self.assertEqual(output, "\n" * 8 +
                              (" " * 7 + "#" * 5 + "\n") * 6)
-
 
         with io.StringIO() as buf, redirect_stdout(buf):
             self.r4.display()
@@ -407,157 +406,3 @@ class TestRectangle(unittest.TestCase):
         self.assertIsNot(r2, r2c)
         self.assertNotEqual(r1, r1c)
         self.assertNotEqual(r2, r2c)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
