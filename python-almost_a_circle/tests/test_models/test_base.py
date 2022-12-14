@@ -57,7 +57,7 @@ class TestBase(unittest.TestCase):
         Rectangle.save_to_file(None)
         self.assertTrue(os.path.isfile("Rectangle.json"))
         with open("Rectangle.json", "r") as fall:
-            self.assertEqual(f.read(), "[]")
+            self.assertEqual(fall.read(), "[]")
 
         Rectangle.save_to_file([])
         with open("Rectangle.json", "r") as fall:

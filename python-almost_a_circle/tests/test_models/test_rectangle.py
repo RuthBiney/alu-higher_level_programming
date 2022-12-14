@@ -62,7 +62,7 @@ class TestRectangle(unittest.TestCase):
             s = Rectangle(4, 2)
             with patch('sys.stdout', n=StringIO()) as fall:
                 print(s)
-                self.assertEqual(fall.getvalue(), "[Rectangle] (1) 0/0 - 4/2")
+                self.assertEqual(fall.getvalue(), "[Rectangle] (1) 0/0 - 4/2\n")
         
     def test_display(self):
         """Test for display"""
