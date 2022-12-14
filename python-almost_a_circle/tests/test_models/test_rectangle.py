@@ -62,7 +62,7 @@ class TestRectangle(unittest.TestCase):
             s = Rectangle(4, 2)
             with patch('sys.stdout', n=StringIO()) as fall:
                 print(s)
-                self.assertEqual(fall.getvalue(), "[Rectangle] (1) 0/0 - 4/2\n")
+                self.assertEqual(fall.getvalue(), "[Rectangle] (1) 0/0 - 10/10")
         
     def test_display(self):
         """Test for display"""
@@ -71,15 +71,17 @@ class TestRectangle(unittest.TestCase):
         r3 = Rectangle(4, 2, 3, 2)
         with patch('sys.stdout', n=StringIO()) as fall:
             r1.display()
-            self.assertEqual(fall.getvalue(), "####\n####\n")
+            self.assertEqual(fall.getvalue(), (" " * 4 + "#" * 2 + "\n") * 3)
                 
         with patch('sys.stdout', n=StringIO()) as f:
              r2.display()
-             self.assertEqual(f.getvalue(), "   ####\n   ####\n")
+             self.assertEqual(f.getvalue(), "\n" * 8 +
+                             (" " * 7 + "#" * 5 + "\n") * 6)
                  
         with patch('sys.stdout', n=StringIO()) as f:
              r3.display()
-             self.assertEqual(f.getvalue(), "\n\n   ####\n   ####\n")
+             self.assertEqual(f.getvalue(), "\n" * 14 +
+                             (" " * 13 + "#" * 11 + "\n") * 12)
 
     def test_dictionary(self):
         """Test for dictionary"""
@@ -198,7 +200,7 @@ class TestRectangle(unittest.TestCase):
         self.assertTrue(os.path.isfile("Rectangle.json"))
         with open("Rectangle.json") as fall:
             self.assertEqual(fall.read(), "[]")
-            self.assertEqual(type(f.read()), str)
+            self.assertEqual(type(fall.read()), str)
 
     def test_load_from_file(self):
         """Test for load from file function"""

@@ -84,7 +84,7 @@ class TestSquare(unittest.TestCase):
         """Test update function"""
         Base._Base__nb_objects = 0
         s1 = Square(1)
-        self.assertEqual(s.id, 1)
+        self.assertEqual(s1.id, 1)
 
         s1.update(89)
         self.assertEqual(s1.id, 89)
