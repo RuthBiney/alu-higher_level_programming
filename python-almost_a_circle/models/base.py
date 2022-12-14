@@ -46,9 +46,9 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """returning all the instance with an attribute"""
-        if cls.__name__ is "Rectangle":
+        if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
-        elif cls.__name__ is "Square":
+        elif cls.__name__ == "Square":
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
@@ -95,7 +95,7 @@ class Base:
                                       "height": int(args[2]),
                                       "x": int(args[3]),
                                       "y": int(args[4])}
-                    elif cls.__name__ is "Square":
+                    elif cls.__name__ == "Square":
                         dictionary = {"id": int(args[0]), "size": int(args[1]),
                                       "x": int(args[2]), "y": int(args[3])}
                     obj = cls.create(**dictionary)
