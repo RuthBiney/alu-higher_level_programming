@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//Class rectangle that defines a rectangle
+// Class rectangle that defines a rectangle
 class Rectangle {
   constructor (w, h) {
     if (w == null || h == null) return null;
