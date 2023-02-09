@@ -8,7 +8,7 @@ request(args[0], (error, response, body) => {
   } else {
     fs.writeFile(args[1], body, 'utf8', (error) => {
       if (error) {
-	console.log(error);
+        console.log(error);
       }
     });
   }
