@@ -10,9 +10,9 @@ request(url, (error, response, body) => {
     let counter = 0;
     results.forEach(result => {
       result.characters.forEach(characterUrl => {
-	if (characterUrl.includes('18')) {
+        if (characterUrl.includes('18')) {
           counter++;
-	}
+        }
       });
     });
     console.log(counter);
