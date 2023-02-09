@@ -9,11 +9,11 @@ request(apiUrl, (error, response, body) => {
     const parseData = JSON.parse(body);
     parseData.forEach(item => {
       if (item.completed) {
-	if (result[item.userId] === undefined) {
+        if (result[item.userId] === undefined) {
           result[item.userId] = 1;
         } else {
           result[item.userId] += 1;
-	}
+        }
       }
     });
     console.log(result);
